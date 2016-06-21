@@ -12,3 +12,4 @@
 - Se déplacer dans le dossier [sources](sources)
 - `./bin/activator`
 - `~run`
+- `Naviguer vers [localhost:9000](http://localhost:9000/)

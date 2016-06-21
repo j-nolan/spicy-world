@@ -7,3 +7,8 @@
   * `GRANT ALL PRIVILEGES ON * . * TO 'spicyworld'@'localhost';`
 - Importer le schéma décrit dans `schema.sql` :
   * `mysql -u spicyworld -p < schema.sql`	
+
+## Lancement
+- Se déplacer dans le dossier [sources](sources)
+- `./bin/activator`
+- `~run`

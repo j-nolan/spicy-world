@@ -1,4 +1,4 @@
-@(sauce: (Sauce, List[Flavour]))
+@(sauce: (Sauce, List[Option[Flavour]]))
 @main("Welcome to Spicy World!") {
 	<h1>@sauce._1.name</h1>
 	<div class="sauce-strength">
@@ -9,7 +9,11 @@
 		<strong>Saveurs: </strong>
 		<ul class="sauce-flavours list-inline">
 		@for(flavour <- sauce._2) {
-			<li class="sauce-flavours-list-item">@flavour.name</li>
+			<li class="sauce-flavours-list-item">
+				@for(o <- flavour) {
+					@o.name
+				}
+			</li>
 		}
 		</ul>
 	</div>

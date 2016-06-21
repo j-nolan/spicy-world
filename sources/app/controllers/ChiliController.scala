@@ -48,7 +48,7 @@ class ChiliController @Inject() extends Controller {
       
       Chilies.insert(chili_name.get, chili_country.get.toInt)
       
-      Ok(views.html.message("Sauce " + chili_name + "ajoutée correctement ! Merci")("confirm"))
+      Ok(views.html.message("Sauce " + chili_name.get + "ajoutée correctement ! Merci")("confirm"))
     }
   }
 }

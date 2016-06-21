@@ -149,8 +149,8 @@ DROP TABLE IF EXISTS `Sauce_Saveur`;
 CREATE TABLE `Sauce_Saveur` (
   `idSauce` int(11) NOT NULL,
   `idSaveur` int(11) NOT NULL,
-  CONSTRAINT `fk_Sauce_Saveur_1` FOREIGN KEY (`idSauce`) REFERENCES `Saveur` (`idSaveur`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Sauce_Saveur_2` FOREIGN KEY (`idSaveur`) REFERENCES `Sauce` (`idSauce`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_Sauce_Saveur_1` FOREIGN KEY (`idSaveur`) REFERENCES `Saveur` (`idSaveur`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Sauce_Saveur_2` FOREIGN KEY (`idSauce`) REFERENCES `Sauce` (`idSauce`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

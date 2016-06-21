@@ -51,22 +51,22 @@ object Sauces {
     flavours.foreach(flavour => Await.result(db.run(DBIO.seq(flavourRelation += SauceToFlavour(newSauce.id.get, flavour))), Duration.Inf))
   }
   
-  def all(): List[(Sauce, List[Flavour])] = {
+  def all(): List[(Sauce, List[Option[Flavour]])] = {
     val query = data joinLeft flavourRelation on (_.id === _.flavourId) joinLeft Flavours.data on (_._1.id === _.id)
 
     (for (s <- Await.result(db.run(query.result), Duration.Inf)) yield s)
-    .map{t => (t._1._1, t._2.get)}
     .groupBy(_._1)
+    .map{t => (t._1._1, t._2)}
     .map { case (k,v) => (k,v.map(_._2).toList)}
     .toList
   }
 
-  def byId(id: Int): (Sauce, List[Flavour]) = {
+  def byId(id: Int): (Sauce, List[Option[Flavour]]) = {
     val query = data filter(_.id === id) joinLeft flavourRelation on (_.id === _.flavourId) joinLeft Flavours.data on (_._1.id === _.id)
     val sauces = for (s <- Await.result(db.run(query.result), Duration.Inf)) yield s
 
     (for (s <- Await.result(db.run(query.result), Duration.Inf)) yield s)
-    .map{t => (t._1._1, t._2.get)}
+    .map{t => (t._1._1, t._2)}
     .groupBy(_._1)
     .map { case (k,v) => (k,v.map(_._2).toList)}
     .toList

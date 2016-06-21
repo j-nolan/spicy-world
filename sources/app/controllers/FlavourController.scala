@@ -47,7 +47,7 @@ class FlavourController @Inject() extends Controller {
       
       Flavours.insert(flavour_name.get)
       
-      Ok(views.html.message("Saveur "  + flavour_name + "ajoutée correctement ! Merci")("confirm"))
+      Ok(views.html.message("Saveur "  + flavour_name.get + " ajoutée correctement ! Merci")("confirm"))
     }
   }
 }

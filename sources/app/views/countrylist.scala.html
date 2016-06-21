@@ -1,0 +1,20 @@
+@(countries: List[(Country, Int)])
+@main("Welcome to Spicy World!") {
+	<h1>Pays</h1>
+	<table class="table-list table">
+		<thead>
+			<tr>
+				<th>Nom</th>
+				<th>Piments</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(country <- countries) {
+				<tr>
+					<td>@country._1.name</td>
+					<td>@country._2</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

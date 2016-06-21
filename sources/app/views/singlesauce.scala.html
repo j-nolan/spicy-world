@@ -1,0 +1,17 @@
+@(sauce: (Sauce, List[Flavour]))
+@main("Welcome to Spicy World!") {
+	<h1>@sauce._1.name</h1>
+	<div class="sauce-strength">
+		Force: @sauce._1.force
+	</div>
+
+	<div class="sauce-flavours">
+		<strong>Saveurs: </strong>
+		<ul class="sauce-flavours list-inline">
+		@for(flavour <- sauce._2) {
+			<li class="sauce-flavours-list-item">@flavour.name</li>
+		}
+		</ul>
+	</div>
+	<img src="@sauce._1.image" class="sauce-image pull-xs-left">
+}

@@ -1,0 +1,26 @@
+@(sauces: List[(Sauce, List[Flavour])])
+@main("Welcome to Spicy World!") {
+	<h1>Sauces</h1>
+	<ul class="sauce-list list-unstyled row">
+	@for((sauce, flavours) <- sauces) {
+		<li class="sauce-list-item col-sm-4">
+			<div class="sauce-image" style="background-image:url('@sauce.image');">
+
+				<a class="sauce-name" href="@routes.SauceController.singleSauce(sauce.id.get)">
+					@sauce.name
+				</a>
+			</div>
+		</li>
+	}
+
+
+		<li class="sauce-list-item col-sm-4">
+			<div class="sauce-image sauce-add">
+
+				<a class="sauce-name" href="@routes.SauceController.sauceForm">
+					+
+				</a>
+			</div>
+		</li>
+	</ul>
+}

@@ -1,0 +1,180 @@
+/*
+Palette:
+.dark-primary-color    { background: #AFB42B; }
+.default-primary-color { background: #CDDC39; }
+.light-primary-color   { background: #F0F4C3; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: #FFC107; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+*/
+
+body {
+	background-color:#F0F4C3;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+a {
+	color:darkred;
+}
+
+.site-header {
+	text-align:center;
+	background: url(../images/bg3.jpg) no-repeat bottom center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height:200px;
+	margin-bottom:100px;
+}
+
+.site-logo-container {
+	display:block;
+	width:500px;
+	margin:auto;
+	text-align: center;
+	background-color:#e3d6ae;
+	-webkit-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.75);
+
+}
+
+.site-logo {
+}
+
+.top-nav {
+	text-align:center;
+	background-color:#660033;
+	border-top:1.5em solid #e3d6ae;
+	height:3em;
+	margin-bottom:50px;
+}
+.top-nav a {
+	color:white;
+	text-shadow: -1px 0 rgba(0,0,0, 0.5), 0 1px rgba(0,0,0, 0.5), 1px 0 rgba(0,0,0, 0.5), 0 -1px rgba(0,0,0, 0.5);
+	display:inline-block;
+	margin:15px 30px 15px 30px;
+	padding:15px 30px 15px 30px;
+	background:#99cc00;
+	-webkit-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.3);
+	box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.3);
+	font-size:1.7em;
+	transform: rotate(-3deg);
+	position:relative;
+	top:-2em;
+}
+
+.top-nav a:hover {
+	background-color:#FFC107;
+	text-decoration: none;
+}
+
+/* Gestion des messages de confirmation et d'erreurs' */
+.message {
+	border:1px solid #B6B6B6;
+	padding:5px;	
+}
+
+.message.confirm {
+	border-color:green;
+}
+
+.message.error {
+	border-color:red;
+}
+
+/**************/
+/* SAUCE LIST */
+/**************/
+.sauce-image {
+	background: url() no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.sauce-name {
+	text-align:center;
+	line-height: 250px;
+	vertical-align:center;
+	display:block;
+	height:250px;
+	font-size:2.5em;
+	color:white;
+	text-shadow: -1px 0 rgba(0,0,0, 0.5), 0 1px rgba(0,0,0, 0.5), 1px 0 rgba(0,0,0, 0.5), 0 -1px rgba(0,0,0, 0.5);
+	margin-bottom:30px;
+}
+
+.sauce-name:Hover {
+	color:black;
+	text-shadow: none;
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Special cell: adde a new sauce*/
+.sauce-add {
+	background-color:rgb(230, 230, 230);
+}
+.sauce-add .sauce-name {
+	font-size:10em;
+	font-family:Arial;
+	font-weight:bolder;
+	text-shadow: none;
+	color:darkgrey;
+}
+.sauce-add .sauce-name:Hover {
+	background:#99cc00;
+	color:white;
+}
+
+
+/*****************/
+/* TABLE LISTS   */
+/*****************/
+.table-list {
+	color:white;
+	transform:rotate(-1deg);
+	-webkit-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.3);
+	box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.3);
+}
+.table-list thead tr {
+	background-color: #99cc00;
+	text-shadow: -1px 0 rgba(0,0,0, 0.5), 0 1px rgba(0,0,0, 0.5), 1px 0 rgba(0,0,0, 0.5), 0 -1px rgba(0,0,0, 0.5);
+}
+.table-list tbody tr {
+	background-color:#660033;
+}
+.table-list th {
+	font-size:3em;
+}
+
+.table-list tr {
+	height:3em;
+}
+.table-list-add {
+	background:#99cc00;
+	text-align:center;
+	line-height:3em;
+	font-size:1.2em;
+	height:3em;
+	text-shadow: -1px 0 rgba(0,0,0, 0.5), 0 1px rgba(0,0,0, 0.5), 1px 0 rgba(0,0,0, 0.5), 0 -1px rgba(0,0,0, 0.5);
+	-webkit-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.75);
+	color:white;
+}
+
+.table-list-add:Hover {
+	color:black;
+	text-shadow: none;
+	text-decoration: none;
+}

@@ -1,0 +1,39 @@
+@(chilies: Map[Int, String], flavours: Map[Int, String])
+@main("Welcome to Spicy World!") {
+
+    <h1>Créer une sauce</h1>
+    <form method="post" action="">
+    
+    	<label>Nom :</label><br>
+    	<input type="text" name="sauce_name"><br>
+    	
+    	<label>Force :</label><br>
+    	<select name="sauce_force">
+    		<option value="doux">Doux</option>
+    		<option value="moyen">Moyen</option>
+    		<option value="fort">Fort</option>
+    		<option value="très fort">Très fort</option>
+    		<option value="extrême">Extrême</option>
+    	</select><br>
+
+        <label>Chili :</label><br>
+        <select name="sauce_chilies" multiple>
+        @for((id, name) <- chilies) {
+            <option value="@id">@name</option>
+        }
+        </select><br>
+    	
+    	<label>Saveurs :</label><br>
+        <select name="sauce_flavours" multiple>
+        @for((id, name) <- flavours) {
+            <option value="@id">@name</option>
+        }
+        </select><br>
+    	
+    	<label>Image (URL):</label><br>
+    	<input type="text" name="sauce_image"><br>
+    	
+    	<input type="submit" value="Créer la sauce">
+    </form>
+    
+}

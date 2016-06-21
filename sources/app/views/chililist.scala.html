@@ -1,0 +1,23 @@
+@(chilies: List[(Chili, Int)])
+@main("Welcome to Spicy World!") {
+	<h1>Piments</h1>
+	<table class="table-list table">
+		<thead>
+			<tr>
+				<th>Nom</th>
+				<th>Sauces</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(chili <- chilies) {
+				<tr>
+					<td>@chili._1.name</td>
+					<td>@chili._2</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	<div class="row">
+		<a class="col-md-offset-5 col-md-2 table-list-add" href="@routes.ChiliController.chiliForm">Ajouter un piment</a>
+	</div>
+}

@@ -1,0 +1,20 @@
+@(countries: Map[Int, String])
+@main("Welcome to Spicy World!") {
+
+    <h1>Créer un piment</h1>
+    <form method="post" action="">
+    
+    	<label>Nom :</label><br>
+    	<input type="text" name="chili_name" required><br>
+    	
+    	<label>Pays : </label><br>
+    	<select name="chili_country">
+         @for((id, name) <- countries) {
+            <option value="@id">@name</option>
+         }   
+        </select>
+    	
+    	<input type="submit" value="Créer le piment">
+    </form>
+    
+}

@@ -14,6 +14,9 @@
 - `~run`
 - `Naviguer vers [localhost:9000](http://localhost:9000/)
 
+## Screenshot
+![DB schema](images/screenshot.png "Screenshot de l'application")
+
 # Discussion
 *Mélanie Huck et James Nolan, juin 2016*
 
